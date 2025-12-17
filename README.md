@@ -23,7 +23,6 @@ Análisis exploratorio de datos (EDA) sobre **deserción de clientes en Telecom 
 2. [🎯 Objetivo](#-objetivo)
 3. [📊 Principales hallazgos](#-principales-hallazgos)
 4. [🚀 Tecnologías utilizadas](#-tecnologías-utilizadas)
-5. [📂 Estructura del proyecto](#-estructura-del-proyecto)
 6. [📊 Acceso al análisis](#-acceso-al-análisis)
 7. [💡 Recomendaciones estratégicas](#-recomendaciones-estratégicas)
 8. [📜 Licencia](#-licencia)
@@ -96,47 +95,11 @@ A partir de estos hallazgos, el equipo de Data Science puede desarrollar **model
 
 ---
 
-## 📂 Estructura del proyecto
-
-```
-telecom-x-latam/
-│
-├── data/
-│   └── telecom_data.csv          # Dataset de clientes
-│
-├── notebooks/
-│   └── TelecomX_LATAM.ipynb      # Análisis exploratorio completo
-│
-├── docs/
-│   ├── Analisis_Churn.md         # Informe técnico detallado
-│   └── Storytelling_Telecom.pdf  # Presentación ejecutiva
-│
-├── images/
-│   └── visualizations/           # Gráficos generados
-│
-├── README.md                      # Este archivo
-└── LICENSE                        # Licencia MIT
-```
-
----
-
 ## 📊 Acceso al análisis
 
 ### 📘 Notebook interactivo
 🔗 **Google Colab:**  
 [📊 Telecom X LATAM - Análisis Completo de Churn](https://colab.research.google.com/github/EddersonPR/challenge-telecom-x/blob/main/TelecomX_LATAM.ipynb)
-
-### 📄 Documentación
-🔗 **Informe técnico:**  
-[📑 Análisis Detallado de Churn](./docs/Analisis_Churn.md)
-
-### 🎯 Storytelling
-🔗 **Presentación ejecutiva:**  
-[📊 Telecom X - Insights y Recomendaciones](./docs/Storytelling_Telecom.pdf)
-
-> El storytelling presenta los hallazgos clave de manera visual y las recomendaciones estratégicas para la toma de decisiones.
-
----
 
 ## 💡 Recomendaciones estratégicas
 
