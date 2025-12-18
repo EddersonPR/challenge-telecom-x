@@ -1,4 +1,4 @@
-# 📡 Telecom X Latam - Análisis de Churn de Clientes
+# 📡 Telecom X Latam - Análisis de Deserción de Clientes
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
@@ -10,11 +10,11 @@
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 
-Análisis exploratorio de datos (EDA) sobre **deserción de clientes en Telecom X Latam**. Este proyecto busca comprender los factores que impulsan el churn y generar insights accionables para:
+Análisis exploratorio de datos (EDA) sobre **deserción de clientes en Telecom X Latam**. Este proyecto busca comprender los factores que impulsan la deserción y generar insights accionables para:
 
 - 📉 Reducir la tasa de abandono
 - 🎯 Priorizar segmentos de alto riesgo
-- 🤖 Sentar las bases para modelos predictivos de churn
+- 🤖 Sentar las bases para modelos predictivos de deserción
 
 ---
 
@@ -49,7 +49,7 @@ A partir de estos hallazgos, el equipo de Data Science puede desarrollar **model
 ## 🎯 Objetivo
 
 ✔️ **Identificar los factores clave** que impulsan la deserción de clientes  
-✔️ **Cuantificar el impacto** de cada variable en la tasa de churn  
+✔️ **Cuantificar el impacto** de cada variable en la tasa de deserción  
 ✔️ **Segmentar clientes** de alto riesgo para acciones preventivas  
 ✔️ **Proponer recomendaciones estratégicas** fundamentadas en datos  
 ✔️ **Establecer bases sólidas** para modelos predictivos de machine learning
@@ -61,13 +61,13 @@ A partir de estos hallazgos, el equipo de Data Science puede desarrollar **model
 ### 🔴 Tasa de deserción global: **26.6%**
 
 ### ⏰ Momento crítico
-- **53% del churn** ocurre en los primeros **6 meses**
+- **53% de la deserción** ocurre en los primeros **6 meses**
 - La antigüedad muestra correlación negativa moderada con el abandono
 - Superar los 6 meses aumenta drásticamente la probabilidad de permanencia
 
 ### 👤 Perfil de alto riesgo
-| Factor | Tasa de Churn |
-|--------|---------------|
+| Factor | Tasa de Deserción |
+|--------|-------------------|
 | Contrato mensual | 42.7% |
 | Fibra óptica | 41.9% |
 | Adultos mayores | 41.7% |
@@ -75,7 +75,7 @@ A partir de estos hallazgos, el equipo de Data Science puede desarrollar **model
 | Sin soporte técnico | 2.7x mayor |
 
 ### 💰 Impacto financiero
-- El churn afecta **desproporcionadamente** a clientes de alto cargo mensual
+- La deserción afecta **desproporcionadamente** a clientes de alto cargo mensual
 - Mediana de cargo: **$80** (desertores) vs **$63** (no desertores)
 - El abandono temprano de clientes premium representa el **mayor riesgo** para ingresos
 
@@ -91,23 +91,23 @@ challenge-telecom-x/
 │
 ├── TelecomX_LATAM.ipynb       # Notebook principal con el análisis completo
 ├── data/
-│   └── TelecomX_Data.json  # Dataset original (7,267 registros), después de ETL, 7,032 registros.
-├── images/                     # Gráficos y visualizaciones generadas
-│   ├── Distribución_Deserción.png
+│   └── TelecomX_Data.json     # Dataset original (7,267 registros → 7,032 después de ETL)
+├── Gráficos/                  # Visualizaciones generadas durante el análisis
+│   ├── Distribución_desercion.png
 │   ├── Antiguedad_Deserción.png
 │   ├── TipoContrato_Deserción.png
 │   ├── ServicioInternet_Deserción.png
 │   └── MétodoPago_Deserción.png
-├── README.md                   # Documentación del proyecto
-└── requirements.txt            # Dependencias de Python
+├── README.md                  # Documentación del proyecto
+└── requirements.txt           # Dependencias de Python
 ```
 
 ### 📋 Descripción de archivos principales
 
 - **TelecomX_LATAM.ipynb**: Contiene todo el análisis exploratorio, desde la carga de datos hasta las conclusiones finales
-- **data/**: Carpeta con el dataset original en formato CSV
-- **images/**: Visualizaciones clave generadas durante el análisis
-- **requirements.txt**: Lista de librerías necesarias con sus versiones
+- **data/**: Carpeta con el dataset original en formato JSON (7,267 registros antes de ETL, 7,032 registros limpios)
+- **Gráficos/**: Visualizaciones clave generadas durante el análisis
+- **requirements.txt**: Lista de librerías necesarias con sus versiones específicas
 
 ---
 
@@ -119,11 +119,11 @@ challenge-telecom-x/
 
 ### 2. Análisis de Antigüedad vs Deserción
 ![Tenure Analysis](https://github.com/EddersonPR/challenge-telecom-x/blob/main/Gr%C3%A1ficos/Antiguedad_Deserci%C3%B3n.png)
-*El 53% del churn ocurre en los primeros 6 meses de servicio*
+*El 53% de la deserción ocurre en los primeros 6 meses de servicio*
 
 ### 3. Impacto del Tipo de Contrato
 ![Contract Type](https://github.com/EddersonPR/challenge-telecom-x/blob/main/Gr%C3%A1ficos/TipoContrato_Deserci%C3%B3n.png)
-*Contratos mensuales presentan 42.7% de churn vs 11% en contratos anuales*
+*Contratos mensuales presentan 42.7% de deserción vs 11% en contratos anuales*
 
 ### 4. Servicio de Internet y Deserción
 ![Internet Service](https://github.com/EddersonPR/challenge-telecom-x/blob/main/Gr%C3%A1ficos/ServicioInternet_Deserci%C3%B3n.png)
@@ -132,8 +132,6 @@ challenge-telecom-x/
 ### 5. Método de Pago
 ![Payment Method](https://github.com/EddersonPR/challenge-telecom-x/blob/main/Gr%C3%A1ficos/M%C3%A9todoPago_Deserci%C3%B3n.png)
 *El cheque electrónico es el método con mayor tasa de abandono (45.3%)*
-
-> **Nota:** Las imágenes de ejemplo deben ser reemplazadas con los gráficos reales generados en tu análisis. Para incluirlas, exporta las visualizaciones desde tu notebook y guárdalas en la carpeta `images/`.
 
 ---
 
@@ -208,12 +206,17 @@ numpy==1.24.3
 matplotlib==3.7.2
 seaborn==0.12.2
 jupyter==1.0.0
+requests==2.31.0
+chardet==5.2.0
+scipy==1.11.0
 ```
 
 **Instalación manual de dependencias:**
 ```bash
-pip install pandas numpy matplotlib seaborn jupyter
+pip install pandas numpy matplotlib seaborn jupyter requests chardet scipy
 ```
+
+**Nota:** Los módulos `json` y `datetime` vienen incluidos con Python y no requieren instalación adicional.
 
 ---
 
@@ -226,7 +229,10 @@ pip install pandas numpy matplotlib seaborn jupyter
 **Solución:** Verifica que el entorno virtual esté activado y ejecuta `pip install jupyter`
 
 **Problema:** Error al cargar el dataset  
-**Solución:** Verifica que el archivo `data/telecom_customers.csv` exista en la ruta correcta
+**Solución:** Verifica que el archivo `data/TelecomX_Data.json` exista en la ruta correcta
+
+**Problema:** Error con `scipy.stats`  
+**Solución:** Instala scipy con `pip install scipy==1.11.0`
 
 ---
 
@@ -240,6 +246,9 @@ pip install pandas numpy matplotlib seaborn jupyter
 - ☁️ **Google Colab** – Ejecución en la nube sin instalación local
 - 💻 **Visual Studio Code** – Desarrollo y edición de código
 - 🌐 **Git / GitHub** – Control de versiones y colaboración
+- 📡 **Requests** – Obtención de datos desde APIs
+- 🔍 **Chardet** – Detección de codificación de archivos
+- 📊 **Scipy** – Análisis estadístico avanzado (correlación point-biserial)
 
 ---
 
@@ -290,17 +299,17 @@ pip install pandas numpy matplotlib seaborn jupyter
 **Variables de mayor peso para el modelo de ML:**
 
 1. **Antigüedad del cliente** (tenure) - Correlación: -0.35
-2. **Tipo de contrato** (Contract) - Churn: 42.7% mensual vs 11% anual
-3. **Servicio de internet** (InternetService) - Churn fibra: 41.9%
+2. **Tipo de contrato** (Contract) - Deserción: 42.7% mensual vs 11% anual
+3. **Servicio de internet** (InternetService) - Deserción fibra: 41.9%
 4. **Cargo mensual** (MonthlyCharges) - Mayor en desertores
-5. **Soporte técnico** (TechSupport) - Sin soporte: 2.7x más churn
-6. **Adulto mayor** (SeniorCitizen) - Churn: 41.7%
-7. **Método de pago** (PaymentMethod) - Cheque: 45.3% churn
+5. **Soporte técnico** (TechSupport) - Sin soporte: 2.7x más deserción
+6. **Adulto mayor** (SeniorCitizen) - Deserción: 41.7%
+7. **Método de pago** (PaymentMethod) - Cheque: 45.3% deserción
 
 **Próximos pasos sugeridos:**
 - Implementar modelos de clasificación (Random Forest, XGBoost, Regresión Logística)
 - Validar con métricas: Accuracy, Precision, Recall, F1-Score, AUC-ROC
-- Desarrollar sistema de scoring de riesgo de churn (0-100)
+- Desarrollar sistema de scoring de riesgo de deserción (0-100)
 - Integrar predicciones con CRM para acciones automatizadas
 
 ---
@@ -308,7 +317,7 @@ pip install pandas numpy matplotlib seaborn jupyter
 ## 🔮 Próximos pasos
 
 - [ ] Desarrollar modelo predictivo de Machine Learning
-- [ ] Implementar dashboard interactivo con Power BI / Tableau
+- [ ] Implementar dashboard interactivo con Power BI
 - [ ] Análisis de cohortes por mes de ingreso
 - [ ] Estudio de CLV (Customer Lifetime Value)
 - [ ] A/B Testing de estrategias de retención
@@ -354,22 +363,23 @@ Data Analyst | Python Developer | Business Intelligence
 📧 **Contacto:**  
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/eddersonpr/)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/EddersonPR)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:tu-email@ejemplo.com)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:edderson.pr@gmail.com)
 
 ---
 
 ## 🙏 Agradecimientos
 
 Este proyecto fue desarrollado como parte del **Challenge de Análisis de Datos - Telecom X Latam**, con el objetivo de aplicar técnicas de:
-- 👨‍💻 ETL
-- 📊 Análisis Exploratorio de Datos (EDA)
-- 📈 Storytelling con datos
-- 💡 Generación de insights de negocio
-- 🎯 Resolución de problemas reales empresariales
+- 👨‍💻 **ETL** (Extracción, Transformación y Carga de datos)
+- 📊 **Análisis Exploratorio de Datos (EDA)**
+- 📈 **Storytelling con datos**
+- 💡 **Generación de insights de negocio**
+- 🎯 **Resolución de problemas reales empresariales**
 
 Agradecimientos especiales a:
 - La comunidad de Data Science por sus recursos y herramientas open source
 - Telecom X Latam (caso de estudio) por proporcionar el contexto del desafío
+- Alura Latam y Oracle Next Education por la formación en análisis de datos
 
 ---
 
@@ -378,7 +388,7 @@ Agradecimientos especiales a:
 Si tienes preguntas sobre el análisis o deseas colaborar:
 - 🐛 Reporta issues en [GitHub Issues](https://github.com/EddersonPR/challenge-telecom-x/issues)
 - 💬 Abre una discusión en [GitHub Discussions](https://github.com/EddersonPR/challenge-telecom-x/discussions)
-- 📧 Contáctame directamente por LinkedIn
+- 📧 Contáctame directamente por [LinkedIn](https://www.linkedin.com/in/eddersonpr/) o [Email](mailto:edderson.pr@gmail.com)
 
 ---
 
