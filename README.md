@@ -91,13 +91,13 @@ challenge-telecom-x/
 │
 ├── TelecomX_LATAM.ipynb       # Notebook principal con el análisis completo
 ├── data/
-│   └── telecom_customers.csv  # Dataset original (7,032 registros)
+│   └── TelecomX_Data.json  # Dataset original (7,267 registros), después de ETL, 7,032 registros.
 ├── images/                     # Gráficos y visualizaciones generadas
-│   ├── churn_distribution.png
-│   ├── tenure_analysis.png
-│   ├── contract_impact.png
-│   ├── internet_service.png
-│   └── payment_method.png
+│   ├── Distribución_Deserción.png
+│   ├── Antiguedad_Deserción.png
+│   ├── TipoContrato_Deserción.png
+│   ├── ServicioInternet_Deserción.png
+│   └── MétodoPago_Deserción.png
 ├── README.md                   # Documentación del proyecto
 └── requirements.txt            # Dependencias de Python
 ```
@@ -113,24 +113,24 @@ challenge-telecom-x/
 
 ## 📊 Ejemplos de visualizaciones
 
-### 1. Distribución de Churn por Categoría
-![Churn Distribution](https://via.placeholder.com/800x400/3776AB/FFFFFF?text=Distribucion+de+Churn+-+26.6%25+de+desercion)
+### 1. Distribución de Deserción
+![Churn Distribution](https://github.com/EddersonPR/challenge-telecom-x/blob/main/Gr%C3%A1ficos/Distribuci%C3%B3n_desercion.png)
 *Tasa general de deserción: 26.6% de los clientes abandonan el servicio*
 
-### 2. Análisis de Antigüedad vs Churn
-![Tenure Analysis](https://via.placeholder.com/800x400/150458/FFFFFF?text=Antiguedad+vs+Churn+-+53%25+en+primeros+6+meses)
+### 2. Análisis de Antigüedad vs Deserción
+![Tenure Analysis](https://github.com/EddersonPR/challenge-telecom-x/blob/main/Gr%C3%A1ficos/Antiguedad_Deserci%C3%B3n.png)
 *El 53% del churn ocurre en los primeros 6 meses de servicio*
 
 ### 3. Impacto del Tipo de Contrato
-![Contract Type](https://via.placeholder.com/800x400/013243/FFFFFF?text=Tipo+de+Contrato+-+42.7%25+en+mensual)
+![Contract Type](https://github.com/EddersonPR/challenge-telecom-x/blob/main/Gr%C3%A1ficos/TipoContrato_Deserci%C3%B3n.png)
 *Contratos mensuales presentan 42.7% de churn vs 11% en contratos anuales*
 
 ### 4. Servicio de Internet y Deserción
-![Internet Service](https://via.placeholder.com/800x400/11557c/FFFFFF?text=Fibra+Optica+-+41.9%25+de+churn)
+![Internet Service](https://github.com/EddersonPR/challenge-telecom-x/blob/main/Gr%C3%A1ficos/ServicioInternet_Deserci%C3%B3n.png)
 *Clientes con fibra óptica tienen 41.9% de deserción*
 
 ### 5. Método de Pago
-![Payment Method](https://via.placeholder.com/800x400/F05032/FFFFFF?text=Cheque+Electronico+-+45.3%25+churn)
+![Payment Method](https://github.com/EddersonPR/challenge-telecom-x/blob/main/Gr%C3%A1ficos/M%C3%A9todoPago_Deserci%C3%B3n.png)
 *El cheque electrónico es el método con mayor tasa de abandono (45.3%)*
 
 > **Nota:** Las imágenes de ejemplo deben ser reemplazadas con los gráficos reales generados en tu análisis. Para incluirlas, exporta las visualizaciones desde tu notebook y guárdalas en la carpeta `images/`.
