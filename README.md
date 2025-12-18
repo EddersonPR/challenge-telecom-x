@@ -22,11 +22,13 @@ Análisis exploratorio de datos (EDA) sobre **deserción de clientes en Telecom 
 1. [📖 Descripción](#-descripción)
 2. [🎯 Objetivo](#-objetivo)
 3. [📊 Principales hallazgos](#-principales-hallazgos)
-4. [🚀 Tecnologías utilizadas](#-tecnologías-utilizadas)
-6. [📊 Acceso al análisis](#-acceso-al-análisis)
-7. [💡 Recomendaciones estratégicas](#-recomendaciones-estratégicas)
-8. [📜 Licencia](#-licencia)
-9. [✨ Autor](#-autor)
+4. [📁 Estructura del proyecto](#-estructura-del-proyecto)
+5. [📊 Ejemplos de visualizaciones](#-ejemplos-de-visualizaciones)
+6. [🚀 Cómo ejecutar el proyecto](#-cómo-ejecutar-el-proyecto)
+7. [🚀 Tecnologías utilizadas](#-tecnologías-utilizadas)
+8. [💡 Recomendaciones estratégicas](#-recomendaciones-estratégicas)
+9. [📜 Licencia](#-licencia)
+10. [✨ Autor](#-autor)
 
 ---
 
@@ -82,53 +84,234 @@ A partir de estos hallazgos, el equipo de Data Science puede desarrollar **model
 
 ---
 
+## 📁 Estructura del proyecto
+
+```
+challenge-telecom-x/
+│
+├── TelecomX_LATAM.ipynb       # Notebook principal con el análisis completo
+├── data/
+│   └── telecom_customers.csv  # Dataset original (7,032 registros)
+├── images/                     # Gráficos y visualizaciones generadas
+│   ├── churn_distribution.png
+│   ├── tenure_analysis.png
+│   ├── contract_impact.png
+│   ├── internet_service.png
+│   └── payment_method.png
+├── README.md                   # Documentación del proyecto
+└── requirements.txt            # Dependencias de Python
+```
+
+### 📋 Descripción de archivos principales
+
+- **TelecomX_LATAM.ipynb**: Contiene todo el análisis exploratorio, desde la carga de datos hasta las conclusiones finales
+- **data/**: Carpeta con el dataset original en formato CSV
+- **images/**: Visualizaciones clave generadas durante el análisis
+- **requirements.txt**: Lista de librerías necesarias con sus versiones
+
+---
+
+## 📊 Ejemplos de visualizaciones
+
+### 1. Distribución de Churn por Categoría
+![Churn Distribution](https://via.placeholder.com/800x400/3776AB/FFFFFF?text=Distribucion+de+Churn+-+26.6%25+de+desercion)
+*Tasa general de deserción: 26.6% de los clientes abandonan el servicio*
+
+### 2. Análisis de Antigüedad vs Churn
+![Tenure Analysis](https://via.placeholder.com/800x400/150458/FFFFFF?text=Antiguedad+vs+Churn+-+53%25+en+primeros+6+meses)
+*El 53% del churn ocurre en los primeros 6 meses de servicio*
+
+### 3. Impacto del Tipo de Contrato
+![Contract Type](https://via.placeholder.com/800x400/013243/FFFFFF?text=Tipo+de+Contrato+-+42.7%25+en+mensual)
+*Contratos mensuales presentan 42.7% de churn vs 11% en contratos anuales*
+
+### 4. Servicio de Internet y Deserción
+![Internet Service](https://via.placeholder.com/800x400/11557c/FFFFFF?text=Fibra+Optica+-+41.9%25+de+churn)
+*Clientes con fibra óptica tienen 41.9% de deserción*
+
+### 5. Método de Pago
+![Payment Method](https://via.placeholder.com/800x400/F05032/FFFFFF?text=Cheque+Electronico+-+45.3%25+churn)
+*El cheque electrónico es el método con mayor tasa de abandono (45.3%)*
+
+> **Nota:** Las imágenes de ejemplo deben ser reemplazadas con los gráficos reales generados en tu análisis. Para incluirlas, exporta las visualizaciones desde tu notebook y guárdalas en la carpeta `images/`.
+
+---
+
+## 🚀 Cómo ejecutar el proyecto
+
+### 📍 Opción 1: Google Colab (Recomendado - No requiere instalación)
+
+1. Haz clic en el siguiente enlace:  
+   🔗 [📊 Abrir Notebook en Google Colab](https://colab.research.google.com/github/EddersonPR/challenge-telecom-x/blob/main/TelecomX_LATAM.ipynb)
+
+2. El notebook se abrirá directamente en tu navegador
+
+3. Haz clic en **"Ejecutar todo"** en el menú `Runtime > Run all`
+
+4. Todos los gráficos y análisis se generarán automáticamente
+
+**Ventajas:**
+- ✅ No necesitas instalar nada en tu computadora
+- ✅ Funciona desde cualquier dispositivo con navegador
+- ✅ Incluye GPU gratuita si necesitas procesamiento adicional
+
+---
+
+### 💻 Opción 2: Ejecución Local
+
+#### Requisitos previos
+- Python 3.8 o superior
+- pip (gestor de paquetes de Python)
+- Git (opcional, para clonar el repositorio)
+
+#### Pasos de instalación
+
+**1. Clona el repositorio**
+```bash
+git clone https://github.com/EddersonPR/challenge-telecom-x.git
+cd challenge-telecom-x
+```
+
+**2. Crea un entorno virtual (recomendado)**
+```bash
+# En Windows
+python -m venv venv
+venv\Scripts\activate
+
+# En Mac/Linux
+python3 -m venv venv
+source venv/bin/activate
+```
+
+**3. Instala las dependencias**
+```bash
+pip install -r requirements.txt
+```
+
+**4. Inicia Jupyter Notebook**
+```bash
+jupyter notebook TelecomX_LATAM.ipynb
+```
+
+**5. Ejecuta el análisis**
+- El notebook se abrirá en tu navegador predeterminado
+- Ejecuta las celdas secuencialmente con `Shift + Enter`
+- O ejecuta todo el notebook con `Cell > Run All`
+
+---
+
+### 📦 Dependencias principales
+
+```txt
+pandas==2.0.3
+numpy==1.24.3
+matplotlib==3.7.2
+seaborn==0.12.2
+jupyter==1.0.0
+```
+
+**Instalación manual de dependencias:**
+```bash
+pip install pandas numpy matplotlib seaborn jupyter
+```
+
+---
+
+### 🔧 Solución de problemas comunes
+
+**Problema:** `ModuleNotFoundError: No module named 'pandas'`  
+**Solución:** Ejecuta `pip install pandas numpy matplotlib seaborn`
+
+**Problema:** Jupyter no se inicia  
+**Solución:** Verifica que el entorno virtual esté activado y ejecuta `pip install jupyter`
+
+**Problema:** Error al cargar el dataset  
+**Solución:** Verifica que el archivo `data/telecom_customers.csv` exista en la ruta correcta
+
+---
+
 ## 🚀 Tecnologías utilizadas
 
-- 🐍 **Python 3.x** – Lenguaje principal de análisis
-- 📊 **Pandas** – Manipulación y análisis de datos
+- 🐍 **Python 3.8+** – Lenguaje principal de análisis
+- 📊 **Pandas** – Manipulación y análisis de datos estructurados
 - 📈 **Matplotlib / Seaborn** – Visualización de datos y gráficos estadísticos
 - 🔢 **NumPy** – Operaciones numéricas y estadísticas
 - 📓 **Jupyter Notebook** – Desarrollo interactivo del análisis
-- ☁️ **Google Colab** – Ejecución en la nube
+- ☁️ **Google Colab** – Ejecución en la nube sin instalación local
 - 💻 **Visual Studio Code** – Desarrollo y edición de código
 - 🌐 **Git / GitHub** – Control de versiones y colaboración
 
 ---
-
-## 📊 Acceso al análisis
-
-### 📘 Notebook interactivo
-🔗 **Google Colab:**  
-[📊 Telecom X LATAM - Análisis Completo de Churn](https://colab.research.google.com/github/EddersonPR/challenge-telecom-x/blob/main/TelecomX_LATAM.ipynb)
 
 ## 💡 Recomendaciones estratégicas
 
 ### 🚀 Acciones de corto plazo (operativas)
 
 1. **Programa de onboarding intensivo** en los primeros 90 días
+   - Llamadas proactivas de bienvenida
+   - Tutoriales personalizados de servicios contratados
+   - Verificación de satisfacción en días 7, 30 y 90
+
 2. **Seguimiento proactivo** a clientes de fibra óptica
+   - Monitoreo de calidad de servicio
+   - Soporte técnico prioritario
+   - Encuestas de satisfacción trimestrales
+
 3. **Incentivos para migrar** de contrato mensual a anual
-4. **Promover métodos de pago automáticos** (tarjeta/transferencia)
+   - Descuentos del 15-20% en contratos anuales
+   - Meses gratis por adelantado
+   - Servicios premium sin costo adicional
 
-### 🎯 Acciones de retención
+4. **Promover métodos de pago automáticos**
+   - Descuentos por pago con tarjeta o transferencia
+   - Facilitar el cambio desde cheque electrónico
+   - Recordatorios automáticos de vencimiento
 
-**Alertas preventivas para clientes con:**
+---
+
+### 🎯 Acciones de retención (mediano plazo)
+
+**Sistema de alertas tempranas para clientes con:**
 - ⏱️ Antigüedad < 6 meses
-- 💰 Cargo mensual alto
+- 💰 Cargo mensual > $70
 - 🚫 Sin soporte técnico contratado
 - 📝 Contrato próximo a vencer
+- 📞 Historial de quejas o reclamos
 
-**Ofertas personalizadas** antes del vencimiento contractual
+**Programa de retención personalizado:**
+- Ofertas exclusivas 30 días antes del vencimiento contractual
+- Upgrades gratuitos de servicios
+- Atención por ejecutivo dedicado para clientes de alto valor
+
+---
 
 ### 🤖 Data Science - Variables clave para modelo predictivo
 
-1. Antigüedad del cliente
-2. Tipo de contrato
-3. Servicio de internet contratado
-4. Cargo mensual
-5. Soporte técnico (Sí/No)
-6. Adulto mayor (Sí/No)
-7. Método de pago
+**Variables de mayor peso para el modelo de ML:**
+
+1. **Antigüedad del cliente** (tenure) - Correlación: -0.35
+2. **Tipo de contrato** (Contract) - Churn: 42.7% mensual vs 11% anual
+3. **Servicio de internet** (InternetService) - Churn fibra: 41.9%
+4. **Cargo mensual** (MonthlyCharges) - Mayor en desertores
+5. **Soporte técnico** (TechSupport) - Sin soporte: 2.7x más churn
+6. **Adulto mayor** (SeniorCitizen) - Churn: 41.7%
+7. **Método de pago** (PaymentMethod) - Cheque: 45.3% churn
+
+**Próximos pasos sugeridos:**
+- Implementar modelos de clasificación (Random Forest, XGBoost, Regresión Logística)
+- Validar con métricas: Accuracy, Precision, Recall, F1-Score, AUC-ROC
+- Desarrollar sistema de scoring de riesgo de churn (0-100)
+- Integrar predicciones con CRM para acciones automatizadas
+
+---
+
+## 🔮 Próximos pasos
+
+- [ ] Desarrollar modelo predictivo de Machine Learning
+- [ ] Implementar dashboard interactivo con Power BI / Tableau
+- [ ] Análisis de cohortes por mes de ingreso
+- [ ] Estudio de CLV (Customer Lifetime Value)
+- [ ] A/B Testing de estrategias de retención
 
 ---
 
@@ -138,7 +321,27 @@ Este proyecto se comparte bajo la licencia **MIT**.
 Puedes usarlo, modificarlo y distribuirlo libremente citando la fuente.
 
 ```
-MIT License - Copyright (c) 2025 Edderson Pomacanchari Ramos
+MIT License
+
+Copyright (c) 2025 Edderson Pomacanchari Ramos
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 ```
 
 ---
@@ -146,18 +349,39 @@ MIT License - Copyright (c) 2025 Edderson Pomacanchari Ramos
 ## ✨ Autor
 
 **Edderson Pomacanchari Ramos**  
-Data Analyst | Python Developer
+Data Analyst | Python Developer | Business Intelligence
 
 📧 **Contacto:**  
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/eddersonpr/)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/EddersonPR)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:tu-email@ejemplo.com)
 
 ---
 
 ## 🙏 Agradecimientos
 
-Este proyecto fue desarrollado como parte del challenge de análisis de datos, con el objetivo de aplicar técnicas de EDA y storytelling con datos para resolver problemas reales de negocio.
+Este proyecto fue desarrollado como parte del **Challenge de Análisis de Datos - Telecom X Latam**, con el objetivo de aplicar técnicas de:
+- 👨‍💻 ETL
+- 📊 Análisis Exploratorio de Datos (EDA)
+- 📈 Storytelling con datos
+- 💡 Generación de insights de negocio
+- 🎯 Resolución de problemas reales empresariales
+
+Agradecimientos especiales a:
+- La comunidad de Data Science por sus recursos y herramientas open source
+- Telecom X Latam (caso de estudio) por proporcionar el contexto del desafío
+
+---
+
+## 📞 ¿Dudas o sugerencias?
+
+Si tienes preguntas sobre el análisis o deseas colaborar:
+- 🐛 Reporta issues en [GitHub Issues](https://github.com/EddersonPR/challenge-telecom-x/issues)
+- 💬 Abre una discusión en [GitHub Discussions](https://github.com/EddersonPR/challenge-telecom-x/discussions)
+- 📧 Contáctame directamente por LinkedIn
 
 ---
 
 ⭐ **Si este proyecto te resulta útil, considera darle una estrella en GitHub**
+
+[![Star on GitHub](https://img.shields.io/github/stars/EddersonPR/challenge-telecom-x?style=social)](https://github.com/EddersonPR/challenge-telecom-x)
